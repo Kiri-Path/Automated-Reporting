@@ -40,60 +40,60 @@ writer.book = book
 #writing in all sheet names from the workbook
 writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
 
+# # df.to_excel(writer, sheet_name= 'BO data (PP) TY', header= None, index=0, startcol=2, startrow=1)
+# # df2.to_excel(writer, sheet_name= 'BO Data (NPP) TY', header= None, index=0, startcol=0, startrow=1)
+# # df3.to_excel(writer, sheet_name= '2019 UVs,Conversion & Orders RB', header= None, index=0, startcol=0, startrow=0)
+# # #df4.to_excel(writer, sheet_name= 'PP Orders RR', header= None, index=0, startcol=0, startrow=0)
+
+# #writer.save(r'my location')
 # df.to_excel(writer, sheet_name= 'BO data (PP) TY', header= None, index=0, startcol=2, startrow=1)
 # df2.to_excel(writer, sheet_name= 'BO Data (NPP) TY', header= None, index=0, startcol=0, startrow=1)
-# df3.to_excel(writer, sheet_name= '2019 UVs,Conversion & Orders RB', header= None, index=0, startcol=0, startrow=0)
-# #df4.to_excel(writer, sheet_name= 'PP Orders RR', header= None, index=0, startcol=0, startrow=0)
+# # df3.to_excel(writer, sheet_name= '2019 UVs,Conversion & Orders RB', header= None, index=0, startcol=0, startrow=0)
+# # df4.to_excel(writer, sheet_name= 'PP Orders RR', header= None, index=0, startcol=0, startrow=0)
+# DATE=datetime.datetime.now().strftime("%d"+"%m"+"%Y")
+# book.save(r'my location')
+# #writer.save() this would have just saved this file in the same name as which it was uploaded.
+# # XLSX_PATH ='my path'
+# # XLSX_FOLDER= str(get_date(True))
 
-#writer.save(r'my location')
-df.to_excel(writer, sheet_name= 'BO data (PP) TY', header= None, index=0, startcol=2, startrow=1)
-df2.to_excel(writer, sheet_name= 'BO Data (NPP) TY', header= None, index=0, startcol=0, startrow=1)
-# df3.to_excel(writer, sheet_name= '2019 UVs,Conversion & Orders RB', header= None, index=0, startcol=0, startrow=0)
-# df4.to_excel(writer, sheet_name= 'PP Orders RR', header= None, index=0, startcol=0, startrow=0)
-DATE=datetime.datetime.now().strftime("%d"+"%m"+"%Y")
-book.save(r'my location')
-#writer.save() this would have just saved this file in the same name as which it was uploaded.
-# XLSX_PATH ='my path'
-# XLSX_FOLDER= str(get_date(True))
+# # def get_files(XLSX_PATH, XLSX_FOLDER):
+# # # Open outlook
+# # outlook=win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
+# # # use email address
+# # email=outlook.Folders['my email']
+# # # navigate folders to where reports stored. You will need to personalise this
+# # adobe = email.Folders['Inbox'].Folders['KPI Adobe Requests']
 
-# def get_files(XLSX_PATH, XLSX_FOLDER):
-# # Open outlook
-# outlook=win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
-# # use email address
-# email=outlook.Folders['my email']
-# # navigate folders to where reports stored. You will need to personalise this
-# adobe = email.Folders['Inbox'].Folders['KPI Adobe Requests']
+# # #import all email folder messages and data into 'messages'
+# # messages=adobe.Items
 
-# #import all email folder messages and data into 'messages'
-# messages=adobe.Items
+# # date = datetime.today().date()
 
-# date = datetime.today().date()
-
-# adobe_dict = [{'subject': 'Excel Workbook (KPI Template WTD Adobe Requests.xlsx)'},
-#                {'filename': 'KPI Template WTD Adobe Requests.xlsx'}]
+# # adobe_dict = [{'subject': 'Excel Workbook (KPI Template WTD Adobe Requests.xlsx)'},
+# #                {'filename': 'KPI Template WTD Adobe Requests.xlsx'}]
               
-# print()
-# for file in adobe_dict:
-#     for message in messages:
-#         subject = file['subject']
-#         filename = file['filename']
-#         if message.Subject == subject and message.SentOn.date() == date:
-#             print(subject +' email found')
-#             for att in message.attachments:
-#                 att.SaveAsFile(CSV_PATH+CSV_FOLDER+"\\"+filename)
-#                 print()
+# # print()
+# # for file in adobe_dict:
+# #     for message in messages:
+# #         subject = file['subject']
+# #         filename = file['filename']
+# #         if message.Subject == subject and message.SentOn.date() == date:
+# #             print(subject +' email found')
+# #             for att in message.attachments:
+# #                 att.SaveAsFile(CSV_PATH+CSV_FOLDER+"\\"+filename)
+# #                 print()
               
     
 
 
-# for file in adobe_dict:
-#     for message in messages:
-#         subject = file['subject']
-#         filename = file['filename']
-#         if message.Subject == subject and message.SentOn.date() == date:
-#             print(subject +' email found')
-#             for att in message.attachments:
-#                 print(att.FileName+' found')
-#                 att.SaveAsFile(CSV_PATH+CSV_FOLDER+"\\"+filename)
-#                 print(att.FileName+' copied')
-#                 print()
+# # for file in adobe_dict:
+# #     for message in messages:
+# #         subject = file['subject']
+# #         filename = file['filename']
+# #         if message.Subject == subject and message.SentOn.date() == date:
+# #             print(subject +' email found')
+# #             for att in message.attachments:
+# #                 print(att.FileName+' found')
+# #                 att.SaveAsFile(CSV_PATH+CSV_FOLDER+"\\"+filename)
+# #                 print(att.FileName+' copied')
+# #                 print()
